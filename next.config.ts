@@ -1,11 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  // Force clean CSS handling with Turbopack (Next.js 16 default)
-  experimental: {
-    // Ensure proper CSS module handling
-  }
+  reactStrictMode: true
 };
 
 export default nextConfig;
