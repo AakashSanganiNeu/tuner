@@ -207,7 +207,7 @@ export function TunerScreen() {
     noSignalFramesRef.current = 0;
     noisyFramesRef.current = 0;
 
-    const stabilized = stabilizerRef.current.update(result.frequency);
+    const stabilized = stabilizerRef.current.update(result.frequency, result.clarity);
     setDetectedFrequency(stabilized);
     setSignalState("listening");
   }, []);

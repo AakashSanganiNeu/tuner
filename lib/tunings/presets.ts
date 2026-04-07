@@ -62,6 +62,12 @@ export const TUNING_PRESETS: TuningPreset[] = [
     strings: buildStrings(["D2", "A2", "D3", "G3", "B3", "E4"])
   },
   {
+    id: "guitar-dadgad",
+    label: "Guitar DADGAD",
+    instrument: "Guitar",
+    strings: buildStrings(["D2", "A2", "D3", "G3", "A3", "D4"])
+  },
+  {
     id: "ukulele-standard",
     label: "Ukulele Standard",
     instrument: "Ukulele",

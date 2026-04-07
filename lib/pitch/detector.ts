@@ -30,7 +30,7 @@ export function detectPitchYin(
   const minFrequency = options.minFrequency ?? 35;
   const maxFrequency = options.maxFrequency ?? 1200;
   const rmsThreshold = options.rmsThreshold ?? 0.008;
-  const yinThreshold = options.yinThreshold ?? 0.1;
+  const yinThreshold = options.yinThreshold ?? 0.08;
 
   const length = buffer.length;
   const halfLength = Math.floor(length / 2);
@@ -127,7 +127,7 @@ export function detectPitchYin(
 
   const frequency = sampleRate / refinedTau;
   const clarity = Math.max(0, 1 - center);
-  const isNoisy = clarity < 0.55;
+  const isNoisy = clarity < 0.65;
 
   if (!Number.isFinite(frequency) || frequency < minFrequency || frequency > maxFrequency * 1.25) {
     return { frequency: null, clarity, rms, isNoisy: true };
